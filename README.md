@@ -5,35 +5,34 @@ Este proyecto utiliza **LangChain** y **Pinecone** para gestionar una base de da
 - **LangChain**: Para manejar modelos de lenguaje y abstracciones.
 - **Pinecone**: Como base de datos vectorial para almacenar embeddings.
 - **OpenAI**: Para generar embeddings y utilizar modelos de lenguaje.
-- **FastAPI** o cualquier otro framework de backend opcional.
 
 ---
 
 ## Instalación y Configuración
 
 ### 1. Requisitos previos
-Antes de comenzar, asegúrate de tener instalado:
+Antes de comenzar, se debe tener instalado:
 - Python 3.8 o superior
 - pip actualizado (`pip install --upgrade pip`)
 
 ### 2. Instalación de dependencias
-Ejecuta el siguiente comando para instalar las bibliotecas necesarias:
+Se debe ejecutar el siguiente comando para instalar las bibliotecas necesarias:
 ```bash
 pip install -qU langchain-openai pinecone-client
 ```
 
-Si necesitas el paquete completo de LangChain:
+En caso tal de necesitar el paquete completo de LangChain:
 ```bash
 pip install -qU "langchain[openai]"
 ```
 
 ### 3. Configuración de API Keys
-El proyecto requiere una API key de OpenAI. Puedes configurar la clave de la siguiente manera en tu entorno:
+El proyecto requiere una API key de OpenAI. Esta se configura de la siguiente manera en tu entorno:
 ```python
 import os
 os.environ["OPENAI_API_KEY"] = "tu_api_key"
 ```
-Si no deseas almacenarla en el código, puedes ingresarla manualmente:
+Si no desea almacenar en el código, se puede ingresar manualmente:
 ```python
 import getpass
 os.environ["OPENAI_API_KEY"] = getpass.getpass("Enter API key for OpenAI: ")
