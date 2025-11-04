@@ -106,7 +106,7 @@ messages = [
     HumanMessage("Hola!"),
 ]
 response = model.invoke(messages)
-print(response.content)  # Output: 'Ciao!'
+print(response.content)
 ```
 
 ---
